@@ -1,12 +1,6 @@
 # effective-octo-adventure
 git, Lean Lang &amp; eUTXO: A Nix User’s Guide to Tokenomics and AI
 
-1. **Introduction**
-   - Overview of the project
-   - Goals and objectives
-2. **Getting Started**
-   - Prerequisites
-     - Nix installation
-     - Git setup
-   - Cloning the repository
-   - Setting up the environment
+Learning Targets:
+1xx: nix can run `hello world` in lean
+2xx: https://leanprover-community.github.io/mathematics_in_lean/mathematics_in_lean.pdf
