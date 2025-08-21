@@ -1,0 +1,10 @@
+name = "effective-octo-adventure"
+version = "0.1.0"
+defaultTargets = ["effective-octo-adventure"]
+
+[[lean_lib]]
+name = "EffectiveOctoAdventure"
+
+[[lean_exe]]
+name = "effective-octo-adventure"
+root = "Main"
