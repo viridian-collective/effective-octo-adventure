@@ -1,7 +1,0 @@
-name = "Minimal"
-version = "0.1.0"
-defaultTargets = ["minimal"]
-
-[[lean_exe]]
-name = "minimal"
-root = "Main"

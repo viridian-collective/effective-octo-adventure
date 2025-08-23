@@ -1,0 +1,7 @@
+name = "modeling economics wiht eUTXO"
+version = "0.1.0"
+defaultTargets = ["eoa"]
+
+[[lean_exe]]
+name = "eoa"
+root = "Main"
