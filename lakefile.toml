@@ -1,5 +1,5 @@
 name = "modeling economics wiht eUTXO"
-version = "0.1.0"
+version = "0.1.1"
 defaultTargets = ["eoa"]
 
 [[lean_exe]]
