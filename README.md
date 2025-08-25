@@ -1,7 +1,6 @@
 # effective-octo-adventure
-git, Lean Lang &amp; eUTXO: A Nix User’s Guide to Tokenomics and AI
 
-1. Install lean-lang and lake
+implementing eUTXO in lean to evaluate its potential for being used for validating economic theories, such as Institutional Economics. 
 
-- `lean --version` to check if lean-lang is installed
-- `lake --version` to check if lake is installed
+`nix run` returns Hello, World!
+`nix develop` allows you to use `lake exe ` in the subdirectories.
