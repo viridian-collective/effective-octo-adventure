@@ -2,8 +2,6 @@
 -- Import modules here that should be built as part of the library.
 import Examples.Basic
 
-example := Nat.succ "two"
-
 example (g : Nat → Nat → Nat)
         (h₁ : ∀ x, x ≠ 0 → g x x = 1)
         (h₂ : x ≠ 0)
