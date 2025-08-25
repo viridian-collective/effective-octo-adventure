@@ -4,8 +4,8 @@ import Examples
 
 theorem bogus : False := by sorry
 
-#check fun x => [x]
-fun x => [x] : ?m.9 → List ?m.9
+-- #check fun x => [x]
+-- fun x => [x] : ?m.9 → List ?m.9
 
 -- https://lean-lang.org/doc/reference/4.21.0-rc3///Introduction/#example-boxes
 -- this does nothing:
