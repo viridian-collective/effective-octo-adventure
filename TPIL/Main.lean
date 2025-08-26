@@ -1,6 +1,6 @@
 import Examples
 
-#eval s!"The answer is {2 + 2}"
+#eval s!"The answer is {40 + 2}"
 
 theorem bogus : False := by sorry
 
