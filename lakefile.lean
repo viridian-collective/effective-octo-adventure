@@ -8,3 +8,8 @@ package Example
 
 @[default_target]
 lean_lib Example
+
+@[default_target]
+lean_exe eoa {
+  root := `Main
+}
