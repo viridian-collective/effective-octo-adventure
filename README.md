@@ -8,6 +8,7 @@ learning lean for greater good!
 - [x] run some basic programs, like Feline
 - [x] create and run a project to work on TPIL https://github.com/aleeusgr/effective-octo-adventure/pull/3/commits/cda60b6ab9cebe90f995138633b5b490f9dae437
 - [x] test code in [Lean Language Reference](https://lean-lang.org/doc/reference/4.21.0-rc3/find/?domain=Verso.Genre.Manual.section&name=code-samples)  https://github.com/aleeusgr/effective-octo-adventure/pull/3/commits/e50a9a32659565a55a61dc4dc6ea06e29b388822
+- [x] solve exercise in https://lean-lang.org/functional_programming_in_lean/Getting-to-Know-Lean/Evaluating-Expressions/
 
 ## Module 200: [Theorem Proving in Lean](https://lean-lang.org/theorem_proving_in_lean4/) & [Mathematics in Lean](https://leanprover-community.github.io/mathematics_in_lean/)
 - [x] test code in [2. Dependent Type Theory](https://lean-lang.org/theorem_proving_in_lean4///Dependent-Type-Theory/#dependent-type-theory) https://github.com/aleeusgr/effective-octo-adventure/pull/3/commits/204fb9b5f955e6605b41e72dd2cea5769c6e8c80
