@@ -1,5 +1,5 @@
 {
-  description = "Lean 4 Example Project";
+  description = "modeling eUTXO in Lean 4";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -34,7 +34,7 @@
         packages.default =
           ((lean4-nix.lake {inherit pkgs;}).mkPackage {
             src = ./.;
-            roots = ["Example"];
+            roots = ["Main"];
           })
           .executable;
 
