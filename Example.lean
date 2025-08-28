@@ -1,4 +1,3 @@
 import Aesop
+def hello : String := "World"
 
-def main : IO Unit :=
-  IO.println "Cirno's Perfect Arithmetics Class has begun!"
