@@ -1,3 +1,5 @@
+import Example.Basic
 import Aesop
-def hello : String := "World"
+
+def name : String := "Alex"
 
