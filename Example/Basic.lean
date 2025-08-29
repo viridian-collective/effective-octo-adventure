@@ -1,5 +1,3 @@
-def hello : String := "world"
-
 -- https://lean-lang.org/doc/reference/4.21.0-rc3///Introduction/#example-boxes
 
 #eval s!"The answer is {40 + 2}"
