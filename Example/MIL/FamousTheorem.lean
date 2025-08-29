@@ -7,8 +7,8 @@ theorem easy : 2 + 2 = 4 :=
   rfl
 
 #check easy
-def FermatLastTheorem :=
-  ∀ x y z n : ℕ, n > 2 ∧ x * y * z ≠ 0 → x ^ n + y ^ n ≠ z ^ n
-theorem hard : FermatLastTheorem := sorry
-
-#check hard
+-- def FermatLastTheorem :=
+--   ∀ x y z n : ℕ, n > 2 ∧ x * y * z ≠ 0 → x ^ n + y ^ n ≠ z ^ n
+-- theorem hard : FermatLastTheorem := sorry
+-- 
+-- #check hard

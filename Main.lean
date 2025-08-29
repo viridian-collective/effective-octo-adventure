@@ -6,24 +6,6 @@ import Example
 - [ ] in Chaos: The butterfly effect, a key feature of deterministic chaos, describes how small differences in initial conditions lead to vastly different outcomes over time, making long-term prediction impossible even in deterministic systems.
 - [ ] in Network Models: https://en.wikipedia.org/wiki/Braess'_paradox
 
-
-## Module 300: Innovate
-- [eUTXO](https://iohk.io/en/research/library/papers/the-extended-utxo-model/) in lean
-- eUTXO as a component of a socio-economic system
-- WNF "critical juncture" as a phase transition in a socio-economic system 
-- blockchain transactions and state of ledger as datapoints for validating theories around economic and other kinds of institutions
-
-## Module 400: Connect
-- [x] [zulip](https://leanprover.zulipchat.com/)
-  - [ ] introduce yourself
-- [ ] Office hours
-  - [ ] write email,
-  - [ ] attend 
-- [ ] active projects
-  - [ ] Cardano.org
-  - [ ] andamio.io
-  - [ ] [FLT](https://github.com/ImperialCollegeLondon/FLT)
-  - [ ] nix scaffold
   -/
 
 -- errs!
