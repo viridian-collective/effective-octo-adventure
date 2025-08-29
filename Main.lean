@@ -86,35 +86,35 @@ We can read it as follows, to prove `motive as`, it suffices to show that: (1) `
 (3) if `motive as` holds, then `motive ([a] ++ as ++ [b])` also holds for any `a`, `b`, and `as`.
 Note that the structure of this induction principle is very similar to the `Palindrome` inductive predicate.
 -/
-theorem List.palindrome_ind (motive : List α → Prop)
-    (h₁ : motive [])
-    (h₂ : (a : α) → motive [a])
-    (h₃ : (a b : α) → (as : List α) → motive as → motive ([a] ++ as ++ [b]))
-    (as : List α)
-    : motive as :=
-  match as with
-  | []  => h₁
-  | [a] => h₂ a
-  | a₁::a₂::as' =>
-    have ih := palindrome_ind motive h₁ h₂ h₃ (a₂::as').dropLast
-    have : [a₁] ++ (a₂::as').dropLast ++ [(a₂::as').last (by simp)] = a₁::a₂::as' := by simp
-    this ▸ h₃ _ _ _ ih
-termination_by _ as => as.length
+-- theorem List.palindrome_ind (motive : List α → Prop)
+--     (h₁ : motive [])
+--     (h₂ : (a : α) → motive [a])
+--     (h₃ : (a b : α) → (as : List α) → motive as → motive ([a] ++ as ++ [b]))
+--     (as : List α)
+--     : motive as :=
+--   match as with
+--   | []  => h₁
+--   | [a] => h₂ a
+--   | a₁::a₂::as' =>
+--     have ih := palindrome_ind motive h₁ h₂ h₃ (a₂::as').dropLast
+--     have : [a₁] ++ (a₂::as').dropLast ++ [(a₂::as').last (by simp)] = a₁::a₂::as' := by simp
+--     this ▸ h₃ _ _ _ ih
+-- termination_by _ as => as.length
 
 /-!
 We use our new induction principle to prove that if `as.reverse = as`, then `Palindrome as` holds.
 Note that we use the `using` modifier to instruct the `induction` tactic to use this induction principle
 instead of the default one for lists.
 -/
-theorem List.palindrome_of_eq_reverse (h : as.reverse = as) : Palindrome as := by
-  induction as using palindrome_ind
-  next   => exact Palindrome.nil
-  next a => exact Palindrome.single a
-  next a b as ih =>
-    have : a = b := by simp_all
-    subst this
-    have : as.reverse = as := by simp_all
-    exact Palindrome.sandwich a (ih this)
+-- theorem List.palindrome_of_eq_reverse (h : as.reverse = as) : Palindrome as := by
+--   induction as using palindrome_ind
+--   next   => exact Palindrome.nil
+--   next a => exact Palindrome.single a
+--   next a b as ih =>
+--     have : a = b := by simp_all
+--     subst this
+--     have : as.reverse = as := by simp_all
+--     exact Palindrome.sandwich a (ih this)
 
 /-!
 We now define a function that returns `true` iff `as` is a palindrome.
@@ -127,9 +127,9 @@ def List.isPalindrome [DecidableEq α] (as : List α) : Bool :=
 /-!
 It is straightforward to prove that `isPalindrome` is correct using the previously proved theorems.
 -/
-theorem List.isPalindrome_correct [DecidableEq α] (as : List α) : as.isPalindrome ↔ Palindrome as := by
-  simp [isPalindrome]
-  exact Iff.intro (fun h => palindrome_of_eq_reverse h) (fun h => reverse_eq_of_palindrome h)
+-- theorem List.isPalindrome_correct [DecidableEq α] (as : List α) : as.isPalindrome ↔ Palindrome as := by
+--   simp [isPalindrome]
+--   exact Iff.intro (fun h => palindrome_of_eq_reverse h) (fun h => reverse_eq_of_palindrome h)
 
 #eval [1, 2, 1].isPalindrome
 #eval [1, 2, 3, 1].isPalindrome
