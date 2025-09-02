@@ -1,0 +1,3 @@
+-- adding this code to Main gives an error!
+--#check fun x => [x]
+--fun x => [x] : ?m.9 → List ?m.9
