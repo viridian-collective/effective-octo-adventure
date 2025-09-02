@@ -12,10 +12,10 @@ import Example
 
 #check 2 + 2
 
--- def f (x : ℕ) :=
---   x + 3
--- 
--- #check f
+def f (x : ℕ) :=
+  x + 3
+
+#check f
 
 
 def main : IO Unit := do
@@ -27,5 +27,5 @@ def main : IO Unit := do
   stdout.putStrLn s!"Look at the Abstract Model of UTXO-based Cryptocurrencies with Scripts"
   stdout.putStrLn s!"It's 500 lines of code! in Agda!"
   stdout.putStrLn s!"I am scared, I will dive into the foundations of Lean first" 
-  -- stdout.putStrLn s!"Here is an error to debug: {f 7}" 
+  stdout.putStrLn s!"Here is an error to debug: {f 7}" 
   stdout.putStrLn s!"✅" 
