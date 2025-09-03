@@ -14,7 +14,34 @@ theorem t1 : p → q → p := fun hp : p => fun hq : q => hp
 #eval "which lead me to find something better: description of the error in FPIL, 7.31."
 -- https://lean-lang.org/functional_programming_in_lean/Programming-with-Dependent-Types/Worked-Example___-Typed-Queries/#Functional-Programming-in-Lean--Programming-with-Dependent-Types--Worked-Example___-Typed-Queries
 
+inductive DBType where
+  | int | string | bool
 
+abbrev DBType.asType : DBType → Type
+  | .int => Int
+  | .string => String
+  | .bool => Bool
+-- Using DBType.asType allows these codes to be used for types. For example:
+
+#eval ("Mount Hood" : DBType.string.asType)
+
+-- It is possible to compare the values described by any of the three database types for equality. Explaining this to Lean, however, requires a bit of work. Simply using BEq directly fails:
+
+-- def DBType.beq (t : DBType) (x y : t.asType) : Bool :=
+--   x == y
+
+def DBType.beq (t : DBType) (x y : t.asType) : Bool :=
+  match t with
+  | .int => x == y
+  | .string => x == y
+  | .bool => x == y
+
+instance {t : DBType} : Repr t.asType where
+  reprPrec :=
+    match t with
+    | .int => reprPrec
+    | .string => reprPrec
+    | .bool => reprPrec
 
 def main : IO Unit := do
 
