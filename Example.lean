@@ -1,6 +1,7 @@
 import Example.Basic
 import Example.DependentTypeTheory
 import Example.MIL.FamousTheorem
+import Example.MIL.C02Basics
 import Aesop
 
 def name : String := "Alex"
