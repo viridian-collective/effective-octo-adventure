@@ -1,6 +1,6 @@
-#eval "declare new constant to test imports in Main"
+-- declare new constant to test imports in Main
 def fifty : String := "fifty"
-#eval "Student Learning Target: "
+#eval "Student Learning Target: resolve a program error"
 
 #eval "Suzan Sto Helit is in the library reading the MIL book, C02_Basics"
 -- https://leanprover-community.github.io/mathematics_in_lean/C02_Basics.html#calculating
@@ -10,11 +10,11 @@ def fifty : String := "fifty"
 -- In Lean, stating a theorem is tantamount to stating a goal, namely, the goal of proving the theorem. Lean provides the rewriting tactic rw, to replace the left-hand side of an identity by the right-hand side in the goal. 
 #eval "Here is an error to debug:" 
 #eval "uncomment this block to see the error in CI or locally"
-/-
-example (a b c : ℝ) : a * b * c = b * (a * c) := by
-  rw [mul_comm a b]
-  rw [mul_assoc b a c]
--/
+
+-- example (a b c : ℝ) : a * b * c = b * (a * c) := by
+--   rw [mul_comm a b]
+--   rw [mul_assoc b a c]
+
 #eval "we got bedazzled! Lets run simpler code from C01_Introduction:"
 
 -- Put simply, Lean is a tool for building complex expressions in a formal language known as dependent type theory.
@@ -30,22 +30,20 @@ def f (x : ℕ) :=
 #check f
 -/
 
-#eval "went back to working code in TPIL to learn that def"
--- https://lean-lang.org/theorem_proving_in_lean4///find/?domain=Verso.Genre.Manual.section&name=types-as-objects
-def α : Type := Nat
-def β : Type := Bool
-def F : Type → Type := List
-def G : Type → Type → Type := Prod
+-- #eval "went back to working code in TPIL CH2.2"
+-- def α : Type := Nat
+-- def β : Type := Bool
+-- def F : Type → Type := List
+-- def G : Type → Type → Type := Prod
+-- 
+-- #check α
+-- #check F α
+-- #check F Nat
+-- #check G α
+-- #check G α β
+-- #check G α Nat
 
-#check α
-#check F α
-#check F Nat
-#check G α
-#check G α β
-#check G α Nat
-
-#eval "and fun are not the same"
+#eval "which we were able to resolve using code from TPIL CH2.2"
 #check fun (x : Nat) => x + 5-- λ and fun mean the same thing
 #check λ (x : Nat) => x + 5
-
 
