@@ -1,3 +1,6 @@
+#eval "get familiar with the Lean language."
+-- This file contains basic examples and experiments with Lean 4 from Lean Language Reference
+
 -- https://lean-lang.org/doc/reference/4.21.0-rc3///Introduction/#example-boxes
 
 -- defining an inductive type for even numbers

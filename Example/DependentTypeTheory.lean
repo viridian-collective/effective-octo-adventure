@@ -1,3 +1,4 @@
+#eval "look into Theorem Proving in Lean"
 /- Any text between /- and -/ constitutes a comment block that is ignored by Lean. -/
 
 /- “Type theory” gets its name from the fact that every expression has an associated type. For example, in a given context, x + 0 may denote a natural number and f may denote a function on the natural numbers. For those who like precise definitions, a Lean natural number is an arbitrary-precision unsigned integer.-/
