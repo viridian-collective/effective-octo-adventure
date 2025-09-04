@@ -1,6 +1,7 @@
 -- declare new constant to test imports in Main
 def fifty : String := "fifty"
 #eval "Student Learning Target: resolve a program error"
+#eval "Student Learning Target: add a dependency"
 
 #eval "Suzan Sto Helit is in the library reading the MIL book, C02_Basics"
 -- https://leanprover-community.github.io/mathematics_in_lean/C02_Basics.html#calculating
@@ -8,19 +9,15 @@ def fifty : String := "fifty"
 -- We generally learn to carry out mathematical calculations without thinking of them as proofs. But when we justify each step in a calculation, as Lean requires us to do, the net result is a proof that the left-hand side of the calculation is equal to the right-hand side.
 
 -- In Lean, stating a theorem is tantamount to stating a goal, namely, the goal of proving the theorem. Lean provides the rewriting tactic rw, to replace the left-hand side of an identity by the right-hand side in the goal. 
-#eval "Code from the book results in error!" 
-#eval "uncomment this block to see the error in CI or locally"
 
+-- import Mathlib --otherwise it fails
 -- example (a b c : ℝ) : a * b * c = b * (a * c) := by
 --   rw [mul_comm a b]
 --   rw [mul_assoc b a c]
 
 
-#eval "we got bedazzled! Lets run simpler code from C01_Introduction:"
-
+#eval "we got bedazzled! go back to C01" 
 -- Put simply, Lean is a tool for building complex expressions in a formal language known as dependent type theory.
-
-#check 2 + 2
 
 #eval "and we found that it fails with the same error!" 
 /-
@@ -30,7 +27,7 @@ def f (x : ℕ) :=
 
 #check f
 -/
-
+/-
 #eval "went back to working code in TPIL CH2.2"
 def α : Type := Nat
 def β : Type := Bool
@@ -103,9 +100,9 @@ instance {t : DBType} : Repr t.asType where
     | .int => reprPrec
     | .string => reprPrec
     | .bool => reprPrec
-
-#eval "and finally we noticed import statement in the text of the book!"
-#eval "For the sake of brevity, my arse"
-#eval "-[ ] import Matlib"
+-/
+-- #eval "and finally we noticed import statement in the text of the book!"
+-- #eval "For the sake of brevity, my arse"
+#eval "-[x] import Matlib" -- 14k modules, takes whole day to build! TODO: find out how to import only modules
 
 
