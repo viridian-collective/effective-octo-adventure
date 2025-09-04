@@ -1,9 +1,13 @@
+#eval "get familiar with the Lean language."
+-- This file contains basic examples and experiments with Lean 4 from Lean Language Reference
+
 -- https://lean-lang.org/doc/reference/4.21.0-rc3///Introduction/#example-boxes
 
 -- defining an inductive type for even numbers
-inductive Even : Nat → Prop where -- constructor for even numbers
-  | zero : Even 0 -- 0 is even
-  | plusTwo : Even n → Even (n + 2) -- if n is even, then n + 2 is even
+-- conflicts with mathlib!
+-- inductive Even : Nat → Prop where -- constructor for even numbers
+--   | zero : Even 0 -- 0 is even
+--   | plusTwo : Even n → Even (n + 2) -- if n is even, then n + 2 is even
 
 -- experimenting with eval:
 #eval s!"The answer is {40 + 2}"

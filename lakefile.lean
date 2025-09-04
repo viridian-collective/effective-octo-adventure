@@ -4,8 +4,8 @@ open Lake DSL
 require aesop from git
   "https://github.com/leanprover-community/aesop.git" @ "v4.22.0-rc4"
 
--- require mathlib from git
---  "https://github.com/leanprover-community/mathlib4.git"
+require mathlib from git
+  "https://github.com/leanprover-community/mathlib4.git" @ "v4.22.0"
 
 package Eoa
 
