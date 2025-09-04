@@ -106,3 +106,30 @@ instance {t : DBType} : Repr t.asType where
 #eval "-[x] import Matlib" -- 14k modules, takes whole day to build! TODO: find out how to import only modules
 
 
+-- Try proving these identities, in each case replacing sorry by a tactic proof. With the rw tactic, you can use a left arrow (\l) to reverse an identity. For example, rw [← mul_assoc a b c] replaces a * (b * c) by a * b * c in the current goal. Note that the left-pointing arrow refers to going from right to left in the identity provided by mul_assoc, it has nothing to do with the left or right side of the goal.
+
+example (a b c : ℝ) : c * b * a = b * (a * c) := by
+  sorry
+
+example (a b c : ℝ) : a * (b * c) = b * (a * c) := by
+  sorry
+
+example (a b c : ℝ) : a * b * c = b * c * a := by
+  rw [mul_assoc]
+  rw [mul_comm]
+
+-- You can also provide partial information. For example, mul_comm a matches any pattern of the form a * ? and rewrites it to ? * a. Try doing the first of these examples without providing any arguments at all, and the second with only one argument.
+
+example (a b c : ℝ) : a * (b * c) = b * (c * a) := by
+  sorry
+
+example (a b c : ℝ) : a * (b * c) = b * (a * c) := by
+  sorry
+
+-- You can also use rw with facts from the local context.
+
+example (a b c d e f : ℝ) (h : a * b = c * d) (h' : e = f) : a * (b * e) = c * (d * f) := by
+  rw [h']
+  rw [← mul_assoc]
+  rw [h]
+  rw [mul_assoc]
