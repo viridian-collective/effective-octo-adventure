@@ -1,6 +1,7 @@
 import Example
+import Mathlib
 
-#eval "here is a bit of code from C02, it probably needs Matlib to thrive"
+#eval "here is a bit of code from C02, it probably needs Mathlib to thrive"
 
 example (a b c : ℝ) : a * b * c = b * (a * c) := by
   rw [mul_comm a b]
