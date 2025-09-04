@@ -7,6 +7,7 @@ example (a b c : ℝ) : a * b * c = b * (a * c) := by
   rw [mul_assoc b a c]
 
 #eval "continue on with the exercises:"
+-- https://leanprover-community.github.io/learn.html
 
 def main : IO Unit := do
 
@@ -14,5 +15,3 @@ def main : IO Unit := do
 
   stdout.putStrLn s!"Hello, {name}! Viridian Collective is {fifty}! Change your {hello} here"
   stdout.putStrLn s!"We are at M1:Foundations, Sprint 2: Advent, week 36"
-  stdout.putStrLn s!"☐ refactor and branch out"
-  stdout.putStrLn s!"☑" 
