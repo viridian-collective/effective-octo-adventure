@@ -1,5 +1,11 @@
 import Example
 
+#eval "here is a bit of code from C02, it probably needs Matlib to thrive"
+
+example (a b c : ℝ) : a * b * c = b * (a * c) := by
+  rw [mul_comm a b]
+  rw [mul_assoc b a c]
+
 def main : IO Unit := do
 
   let stdout ← IO.getStdout
